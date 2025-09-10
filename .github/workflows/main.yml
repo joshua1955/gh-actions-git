@@ -1,14 +1,14 @@
 name: Test React App
 on: push
 jobs:
-  name: test
-  runs-on: ubuntu-latest
-  steps:
-    - name: get repo code
-      uses: actions/checkout@v3
-    - name: install deps
-      run: npm ci
-    - name: test apps
-      run: npm run test
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get repo code
+        uses: actions/checkout@v3
+      - name: install deps
+        run: npm ci
+      - name: test apps
+        run: npm run test
 
 
